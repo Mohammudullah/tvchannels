@@ -1,4 +1,4 @@
-$(window).on('load', loadPlayer('http://103.161.71.202:8080/live/Restream/allrestream/9.m3u8'));
+$(window).on('load', loadPlayer('http://cdn01.palki.tv/live/TSports-M/index.fmp4.m3u8'));
 
 $(document).on('click', '.channel-item', function() {
     loadPlayer($(this).attr('data-channel'));
@@ -17,10 +17,40 @@ function loadPlayer(url) {
     video.src = source;
   } else {
     // For more Hls.js options, see https://github.com/dailymotion/hls.js
-    const hls = new Hls();
+    var hlsjsConfig = {
+      "maxBufferSize": 0,
+      "maxBufferLength": 30,
+      "liveSyncDuration": 30,
+      "liveMaxLatencyDuration": Infinity,
+      "levelLoadingMaxRetry" : 100,
+      "progressive" : true,
+   }
+    const hls = new Hls(hlsjsConfig);
     hls.loadSource(source);
     hls.attachMedia(video);
+    hls.on(Hls.Events.MANIFEST_PARSED,function() {
+        video.play();
+    });
     window.hls = hls;
+    // hls.on(Hls.Events.ERROR, function (event, data) {
+    //   if (data.fatal) {
+    //     switch (data.type) {
+    //       case Hls.ErrorTypes.NETWORK_ERROR:
+    //         // try to recover network error
+    //         console.log('fatal network error encountered, try to recover');
+    //         hls.startLoad();
+    //         break;
+    //       case Hls.ErrorTypes.MEDIA_ERROR:
+    //         console.log('fatal media error encountered, try to recover');
+    //         hls.recoverMediaError();
+    //         break;
+    //       default:
+    //         // cannot recover
+    //         hls.recoverMediaError();
+    //         break;
+    //     }
+    //   }
+    // });
 
     // Handle changing captions
     player.on('languagechange', () => {
