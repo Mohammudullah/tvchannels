@@ -1,11 +1,11 @@
-$(window).on('load', loadPlayer('http://cdn01.palki.tv/live/TSports-M/index.fmp4.m3u8'));
+$(window).on('load', loadPlayer('http://103.161.71.202:8080/live/Restream/allrestream/1.m3u8', 'loadplay'));
 
 $(document).on('click', '.channel-item', function() {
-    loadPlayer($(this).attr('data-channel'));
+    loadPlayer($(this).attr('data-channel'), null);
 });
 
 
-function loadPlayer(url) {
+function loadPlayer(url, loadplay) {
   const source = url;
   const video = document.querySelector('video');
 
@@ -28,6 +28,10 @@ function loadPlayer(url) {
     const hls = new Hls(hlsjsConfig);
     hls.loadSource(source);
     hls.attachMedia(video);
+
+    if(loadplay == 'loadplay') {
+      video.play();
+    }
     hls.on(Hls.Events.MANIFEST_PARSED,function() {
         video.play();
     });
