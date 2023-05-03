@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Player</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="assets/css/plyr.css">
+    <link rel="stylesheet" href="assets/fonts/fonts.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body id="player-page">
+    
+    <div class="player-body">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 d-flex flex-column justify-content-evenly h-100 min-height-100vh">
+                    <div class="video">
+                        <div class="video-wrap">
+                            <video controls crossorigin playsinline></video>
+                        </div>
+                    </div>
+                    <div class="all-channels">
+                        <div class="categories flex-wrap d-none d-md-flex">
+                            <button class="categories-btn">
+                                SPORTS
+                            </button>
+                            <button class="categories-btn">
+                                NEWS
+                            </button>
+                            <button class="categories-btn">
+                                MOVIES
+                            </button>
+                            <button class="categories-btn">
+                                DEFAULT
+                            </button>
+                        </div>
+                        <div class="channels swiper">
+                            <div class="channels-wrap swiper-wrapper">
+                                <div class="channel-item swiper-slide" data-channel="http://103.161.71.202:8080/live/Restream/allrestream/1.m3u8" >
+                                    <div class="channel-item-wrap">
+                                        <img src="assets/images/bt_sports.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="channel-item swiper-slide" data-channel="http://103.161.71.202:8080/live/Restream/allrestream/2.m3u8">
+                                    <div class="channel-item-wrap">
+                                        <img src="assets/images/A_Sports_Logo.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="channel-item swiper-slide" data-channel="http://103.161.71.202:8080/live/Restream/allrestream/3.m3u8">
+                                    <div class="channel-item-wrap">
+                                        <img src="assets/images/Sports18_official_logo.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="channel-item swiper-slide" data-channel="http://103.161.71.202:8080/live/Restream/allrestream/4.m3u8">
+                                    <div class="channel-item-wrap">
+                                        <img src="assets/images/bbc_1.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="channel-item swiper-slide" data-channel="http://103.161.71.202:8080/live/Restream/allrestream/5.m3u8">
+                                    <div class="channel-item-wrap">
+                                        <img src="assets/images/itv_1.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="channel-item swiper-slide" data-channel="http://103.161.71.202:8080/live/Restream/allrestream/6.m3u8">
+                                    <div class="channel-item-wrap">
+                                        <img src="assets/images/astro_arena_hd.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="channel-item swiper-slide" data-channel="http://103.161.71.202:8080/live/Restream/allrestream/7.m3u8">
+                                    <div class="channel-item-wrap">
+                                        <img src="assets/images/Astro_Cricket.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="channel-item swiper-slide" data-channel="http://103.161.71.202:8080/live/Restream/allrestream/8.m3u8">
+                                    <div class="channel-item-wrap">
+                                        <img src="assets/images/astro_super_sport.webp" alt="">
+                                    </div>
+                                </div>
+                                <div class="channel-item swiper-slide" data-channel="http://103.161.71.202:8080/live/Restream/allrestream/9.m3u8">
+                                    <div class="channel-item-wrap">
+                                        <img src="assets/images/sky_sports_cricket.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="channel-item swiper-slide" data-channel="http://103.161.71.202:8080/live/Restream/allrestream/10.m3u8">
+                                    <div class="channel-item-wrap">
+                                        <img src="assets/images/discovery_bangla.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="channel-item swiper-slide" data-channel="http://103.161.71.202:8080/live/Restream/allrestream/11.m3u8">
+                                    <div class="channel-item-wrap">
+                                        <img src="assets/images/cinemania_bol.webp" alt="">
+                                    </div>
+                                </div>
+                                <div class="channel-item swiper-slide" data-channel="http://103.161.71.202:8080/live/Restream/allrestream/12.m3u8">
+                                    <div class="channel-item-wrap">
+                                        <img src="assets/images/cinemania_bol.webp" alt="">
+                                    </div>
+                                </div>
+                                <div class="channel-item swiper-slide" data-channel="http://103.161.71.202:8080/live/Restream/allrestream/13.m3u8">
+                                    <div class="channel-item-wrap">
+                                        <img src="assets/images/rte_two.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="channel-item swiper-slide" data-channel="http://103.161.71.202:8080/live/Restream/allrestream/14.m3u8">
+                                    <div class="channel-item-wrap">
+                                        <img src="assets/images/Star_Sports_1.webp" alt="">
+                                    </div>
+                                </div>
+                                <div class="channel-item swiper-slide" data-channel="http://103.161.71.202:8080/live/Restream/allrestream/15.m3u8">
+                                    <div class="channel-item-wrap">
+                                        <img src="assets/images/National_Geographic-Logo.wine.svg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                              <!-- If we need navigation buttons -->
+                                <div class="swiper-button-prev"></div>
+                                <div class="swiper-button-next"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <script src="assets/js/jquery-3.6.1.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <script src="assets/js/hls.min.js"></script>
+    <script src="assets/js/polyfill.min.js"></script>
+    <script src="assets/js/plyr.min.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper', {
+            slidesPerView: 7,
+            spaceBetween: 12,
+            freeMode: true,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            breakpoints: {
+                320: {
+                    slidesPerView: 2,
+                    spaceBetween: 12
+                },
+                502: {
+                    slidesPerView: 3,
+                    spaceBetween: 12
+                },
+                768: {
+                    slidesPerView: 4,
+                    spaceBetween: 12
+                },
+                992: {
+                    slidesPerView: 5,
+                    spaceBetween: 12
+                },
+                1200: {
+                    slidesPerView: 6,
+                    spaceBetween: 12
+                }
+            }
+        });
+    </script>
+</body>
+</html>
